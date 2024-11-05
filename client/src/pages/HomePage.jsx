@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Announcement,
     Categories,
+    Footer,
     Navbar,
     Newsletter,
     Products,
@@ -17,6 +18,7 @@ const HomePage = () => {
             <Categories />
             <Products />
             <Newsletter />
+            <Footer />
         </div>
     );
 };
