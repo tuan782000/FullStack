@@ -31,6 +31,8 @@ const Title = styled.h1`
 const Form = styled.form`
     display: flex;
     flex-wrap: wrap;
+
+    ${mobile({ flexDirection: 'column' })}
 `;
 
 const Input = styled.input`
