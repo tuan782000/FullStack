@@ -3,6 +3,7 @@ import {
     Announcement,
     Categories,
     Navbar,
+    Newsletter,
     Products,
     Slider
 } from '../components';
@@ -15,6 +16,7 @@ const HomePage = () => {
             <Slider />
             <Categories />
             <Products />
+            <Newsletter />
         </div>
     );
 };

@@ -5,6 +5,7 @@ import Categories from './Categories';
 import CategoryItem from './CategoryItem';
 import Products from './Products';
 import Product from './Product';
+import Newsletter from './Newsletter';
 
 export {
     Announcement,
@@ -13,5 +14,6 @@ export {
     Categories,
     CategoryItem,
     Product,
-    Products
+    Products,
+    Newsletter
 };
