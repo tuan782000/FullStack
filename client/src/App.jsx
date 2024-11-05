@@ -8,9 +8,9 @@ const App = () => {
             {/* <HomePage /> */}
             {/* <ProductList /> */}
             {/* <Product /> */}
-            <Register />
+            {/* <Register /> */}
             {/* <Login /> */}
-            {/* <Cart /> */}
+            <Cart />
         </div>
     );
 };
