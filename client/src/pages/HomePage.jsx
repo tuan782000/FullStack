@@ -1,5 +1,11 @@
 import React from 'react';
-import { Announcement, Categories, Navbar, Slider } from '../components';
+import {
+    Announcement,
+    Categories,
+    Navbar,
+    Products,
+    Slider
+} from '../components';
 
 const HomePage = () => {
     return (
@@ -8,6 +14,7 @@ const HomePage = () => {
             <Navbar />
             <Slider />
             <Categories />
+            <Products />
         </div>
     );
 };
