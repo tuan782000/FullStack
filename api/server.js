@@ -2,7 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './lib/db.js';
 import cookieParser from 'cookie-parser';
-import userRouter from './routes/user.js';
+import userRouter from './routes/v1/user.route.js';
+import authRouter from './routes/v1/auth.route.js';
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(cookieParser());
 app.get('/', () => {
     console.log('test is successfully');
 });
+app.use('/api/users', authRouter); // '/api/users' sẽ là tiền tố cho các route trong router
 app.use('/api/users', userRouter); // '/api/users' sẽ là tiền tố cho các route trong router
 
 const startServer = async () => {
