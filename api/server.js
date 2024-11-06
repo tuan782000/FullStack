@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './lib/db.js';
 import cookieParser from 'cookie-parser';
+import userRouter from './routes/user.js';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use(cookieParser());
 app.get('/', () => {
     console.log('test is successfully');
 });
+app.use('/api/users', userRouter); // '/api/users' sẽ là tiền tố cho các route trong router
 
 const startServer = async () => {
     try {
