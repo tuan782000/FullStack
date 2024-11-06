@@ -18,7 +18,7 @@ yarn add @emotion/react @emotion/styled
 ---
 
 api (nodejs - express - mongodb, stripe thanh toán online, dotenv )
-yarn add express mongoose dotenv bcrypt cookie-parser
+yarn add express mongoose dotenv bcrypt cookie-parser jsonwebtoken
 &&
 yarnd add -D nodemon (chỉ cài cho môi trường DEV)
 
