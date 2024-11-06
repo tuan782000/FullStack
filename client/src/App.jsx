@@ -5,12 +5,12 @@ import { ProductList, Product, Register, Login, Cart } from './pages';
 const App = () => {
     return (
         <div>
-            {/* <HomePage /> */}
+            <HomePage />
             {/* <ProductList /> */}
             {/* <Product /> */}
             {/* <Register /> */}
             {/* <Login /> */}
-            <Cart />
+            {/* <Cart /> */}
         </div>
     );
 };
