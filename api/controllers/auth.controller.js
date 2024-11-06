@@ -27,12 +27,11 @@ const regsiterUser = async (req, res) => {
 
         // const { password, others } = newUser;
 
+        newUser.password = undefined;
+
         res.status(201).json({
             message: 'User registered successfully',
-            user: {
-                username: newUser.username,
-                email: newUser.email
-            }
+            user: newUser
         });
     } catch (error) {
         console.error('Error registering user:', error);
@@ -84,14 +83,14 @@ const loginUser = async (req, res) => {
             }
         );
 
+        user.password = undefined;
+
+        const { ...infoUser } = user._doc;
+
         // Trả về thông tin người dùng đã đăng nhập thành công
         res.status(200).json({
             message: 'User logged in successfully',
-            user: {
-                username: user.username,
-                email: user.email,
-                accessToken: accessToken
-            }
+            user: { infoUser, accessToken }
         });
     } catch (error) {
         console.error('Error logging in user:', error);

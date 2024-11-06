@@ -1,15 +1,30 @@
 import express from 'express';
+import {
+    verifyTokenAndAuthorization,
+    verifyToken,
+    verifyTokenAndAdmin
+} from '../../middlewares/verifyToken.js';
+import {
+    deleteUser,
+    updateInfo,
+    getUser,
+    getAllUsers,
+    getStats
+} from '../../controllers/user.controller.js';
 
 const router = express();
 
-// router.get('/testuser', (req, res) => {
-//     res.send('testusser');
-// });
+// Update
+router.put('/edit/:id', verifyTokenAndAuthorization, updateInfo);
+router.delete('/delete/:id', verifyTokenAndAdmin, deleteUser);
 
-// router.post('/post', (req, res) => {
-//     const username = req.body.username;
-//     console.log(username);
-//     res.send('your username is ' + username);
-// });
+// Get User
+router.get('/find/:id', verifyTokenAndAdmin, getUser);
+
+// Get all user
+router.get('/list', verifyTokenAndAdmin, getAllUsers);
+
+// STATS: thống kê
+router.get('/stats', verifyTokenAndAdmin, getStats);
 
 export default router;

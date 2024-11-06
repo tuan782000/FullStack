@@ -1,15 +1,9 @@
 import express from 'express';
+import { verifyTokenAndAdmin } from '../../middlewares/verifyToken.js';
+import { createProduct } from '../../controllers/product.controller.js';
 
 const router = express();
 
-// router.get('/testuser', (req, res) => {
-//     res.send('testusser');
-// });
-
-// router.post('/post', (req, res) => {
-//     const username = req.body.username;
-//     console.log(username);
-//     res.send('your username is ' + username);
-// });
+router.post('/post', verifyTokenAndAdmin, createProduct);
 
 export default router;
